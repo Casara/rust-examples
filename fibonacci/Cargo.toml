@@ -1,0 +1,34 @@
+[package]
+name = "rs-fibonacci"
+version = "0.1.0"
+edition = "2021"
+description = "Fibonacci calculation in Rust"
+authors = ["Rodrigo Casara <rodrigocasara@gmail.com>"]
+
+[lib]
+name = "fibonacci"
+
+[dependencies]
+rust_decimal = { version = "1.27.0", features = ["maths"] }
+rust_decimal_macros = "1.27.0"
+
+[dev-dependencies]
+criterion = "0.4.0"
+num-format = "0.4.3"
+pretty_assertions = "1.3.0"
+
+[[bench]]
+name = "fibonacci"
+harness = false
+
+[[example]]
+name = "print_100th_fib"
+path = "examples/print_100th_fib.rs"
+
+[[example]]
+name = "cycle"
+path = "examples/cycle.rs"
+
+[[example]]
+name = "step_by"
+path = "examples/step_by.rs"
